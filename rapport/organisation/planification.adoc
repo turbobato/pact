@@ -22,9 +22,9 @@
 [cols=",^,^,,",options="header",]
 |====
 |Tâche |Qui |Quand |Fait |Remarques
-|préparation du document | | | |
-|répartition de la parole | | | |
-|répétition | | | |
+|préparation du document | brouillon : groupe 5.1 & présentation : Bounlhom| | |
+|répartition de la parole | groupe 5.1 | | |
+|répétition |groupe 5.1 | | |
 |====
 
 ==== Taches / PAN2 25/01/22
