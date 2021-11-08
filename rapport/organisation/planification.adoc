@@ -9,12 +9,12 @@
 [cols=",^,^,,",options="header",]
 |====
 |Tâche |Qui |Quand |Fait |Remarques
-|sujet | | | |
-|sujet en anglais | | | |
-|scenario | | | |
-|architecture (schéma et documentation) | | | |
-|découpage en modules | | | |
-|planning temporel (ce document, personnalisé) | | | |
+|sujet | Maxime, Dário, Guilhem| | |
+|sujet en anglais |Bounlhom, Guilhem | | |
+|scenario |Andrey, Maxime | | |
+|architecture (schéma et documentation) | Aymane, Dário| | |
+|découpage en modules |Andrey | | |
+|planning temporel (ce document, personnalisé) | Bounlhom| | |
 |====
 
 * présentation 15mn
