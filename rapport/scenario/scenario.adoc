@@ -12,3 +12,7 @@ C'est alors qu'elle entend parler de Pot'AG sur une annonce en ligne : le systè
 Elle lance alors l'application fournie avec le boitier-interface, crée son compte utilisateur et renseigne son niveau. Après avoir indiqué être débutante, l'application lui dit qu'elle se situe actuellement dans la période de plantation des tomates, et lui propose un tutoriel pour lancer ses premiers pieds de tomate. Elle se rend alors sur l'onglet boutique, où sont comparés les prix des graines de tomates entre les différents revendeurs.
 Elle s'empresse de commander, installe son potager et suit les instructions de l'application. Quelques jours plus tard, elle doit effectuer un déplacement professionnel de cinq jours à Tokyo, et l'application lui permet alors de surveiller et contrôler les apports en lumière et en eau de ses jeunes pousses.
 De retour chez elle, il lui vient une question dont elle ne trouve pas la réponse dans l'application : qu'à cela ne tienne, elle clique sur l'onglet "Forum", pose sa question et reçoit une réponse des membres plus expérimentés qu'elle. Quelques mois plus tard, les tomates se retrouvent dans l'assiette de Marie, prêtes à être dégustées, et Marie, satisfaite de l’expérience, décide d'agrandir son potager et commande seulement de nouveaux capteurs et tuyaux pour ce faire, sans avoir à acheter tout un potager plus grand.
+
+
+
+essai de pull/push andrey
