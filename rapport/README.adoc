@@ -16,20 +16,20 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 
 === Membres du groupe
 
-* Nom1
-* Nom2
-* Nom3
-* Nom4
-* Nom5
-* Nom6
+* Nom1 : Andrey El-Bitar
+* Nom2 : Aymane El Firdoussi
+* Nom3 : Bounlhom Aphayavong
+* Nom4 : Dário Carvalho
+* Nom5 : Guilhem Jazeron
+* Nom6 : Maxime Besson
 
 === Tuteur
 
-* xx yy
+* Jean-Claude Dufourd
 
 === Encadrant génie logiciel
 
-* xx yy
+* 
 
 == Résumé du sujet choisi en français (PAN1)
 
