@@ -9,12 +9,12 @@
 [cols=",^,^,,",options="header",]
 |====
 |Tâche |Qui |Quand |Fait |Remarques
-|sujet | Maxime, Dário, Guilhem| 25 oct.| |
-|sujet en anglais |Bounlhom, Guilhem | 26 oct.| |
-|scenario |Andrey, Maxime | 5 nov| |
-|architecture (schéma et documentation) | Aymane, Dário| 5 nov | |
-|découpage en modules |Andrey | 5 nov | |
-|planning temporel (ce document, personnalisé) | Bounlhom, Aymane| 1 nov. | |
+|sujet | Maxime, Dário, Guilhem| 25 oct.| fait avant le planning |
+|sujet en anglais |Bounlhom, Guilhem | 26 oct.| fait|
+|scenario |Andrey, Maxime | 5 nov| fait|
+|architecture (schéma et documentation) | Aymane, Dário| 5 nov | fait|
+|découpage en modules |Andrey | 5 nov | fait|
+|planning temporel (ce document, personnalisé) | Bounlhom, Aymane| 1 nov. | fait |
 |====
 
 * présentation 15mn
