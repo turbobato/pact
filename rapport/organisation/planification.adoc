@@ -14,7 +14,7 @@
 |scenario |Andrey, Maxime | | |
 |architecture (schéma et documentation) | Aymane, Dário| | |
 |découpage en modules |Andrey | | |
-|planning temporel (ce document, personnalisé) | Bounlhom| | |
+|planning temporel (ce document, personnalisé) | Bounlhom, Aymane| | |
 |====
 
 * présentation 15mn
