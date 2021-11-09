@@ -1,4 +1,3 @@
-////
 === Plans de test (PAN2+)
 
 Vous allez travailler sur chaque bloc de votre projet, et qu’il soit
@@ -22,4 +21,4 @@ test :
 * situation/contexte
 * action ou entrée à appliquer
 * réaction ou sortie attendue.
-////
+
