@@ -13,6 +13,7 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 // Partie non numérotée
 :sectnums!:
 == « Nom du groupe »
+POT'AG
 
 === Membres du groupe
 
@@ -29,7 +30,7 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 
 === Encadrant génie logiciel
 
-* 
+* LINGUAGLOSSA Leonardo
 
 == Résumé du sujet choisi en français (PAN1)
 
