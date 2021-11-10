@@ -13,7 +13,11 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 // Partie non numérotée
 :sectnums!:
 == « Nom du groupe »
+<<<<<<< HEAD
 * Pot'AG
+=======
+POT'AG
+>>>>>>> ec6d6dde742668da57e15f1dc7c40faa2dc0c6ab
 
 === Membres du groupe
 
