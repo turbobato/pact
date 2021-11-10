@@ -13,6 +13,7 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 // Partie non numérotée
 :sectnums!:
 == « Nom du groupe »
+* Pot'AG
 
 === Membres du groupe
 
@@ -29,7 +30,7 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 
 === Encadrant génie logiciel
 
-* 
+* LINGUAGLOSSA Leonardo
 
 == Résumé du sujet choisi en français (PAN1)
 
@@ -92,7 +93,7 @@ include::scenario/scenario.adoc[Scénarios d’usage]
 
 == Architecture du projet (PAN1)
 
-include::architecture/schema.adoc[Schéma d’architecture]
+include::architecture/schema.adoc[Schéma d'architecture]
 
 include::architecture/interfaces.adoc[Description des interfaces]
 
