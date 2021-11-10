@@ -13,11 +13,7 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 // Partie non numérotée
 :sectnums!:
 == « Nom du groupe »
-<<<<<<< HEAD
 * Pot'AG
-=======
-POT'AG
->>>>>>> ec6d6dde742668da57e15f1dc7c40faa2dc0c6ab
 
 === Membres du groupe
 
@@ -96,7 +92,7 @@ include::scenario/scenario.adoc[Scénarios d’usage]
 <<<
 
 == Architecture du projet (PAN1)
-
+image::Diagram1.jpg[Diagram1]
 include::architecture/schema.adoc[Schéma d'architecture]
 
 include::architecture/interfaces.adoc[Description des interfaces]
