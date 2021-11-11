@@ -1,25 +1,30 @@
 === Schéma d’architecture
+image::Diagram1.jpg[Diagram1]
 
+
+////
 Insérer ici un ou plusieurs schémas d’architecture du projet. Voir le
 cours d’introduction au Génie Logiciel. N’hésitez pas à faire des
 schémas hiérarchiques, c'est-à-dire avec un bloc d’un schéma général
 raffiné dans un second schéma ; ou des schémas en plusieurs parties.
+////
+
 
 ==== Description des blocs
 
-Il faut ici une description textuelle de chaque bloc, sa fonction
-détaillée. En général, un bloc correspond à un module, sauf exception.
-Il peut être adapté de faire des blocs plus petits qu’un module.
+===== Bloc Potager 
 
-Il est important ici de distinguer les bibliothèques identifiées et
-disponibles de ce que vous allez produire (coder) vous-même. Vous ne
-devez pas réinventer la roue, mais vous ne devez pas non plus avoir votre
-projet tout fait en encapsulant un programme déjà existant.
+Ce bloc présente de manière générale et simplificative les différents systèmes présents dans notre potager connecté à savoir plusieurs capteurs pouvant mesurer plein de paramètres (temperature, humidité du sol, débit d'eau dans le tuyau et luminosité de la salle), ainsi que d'autres systèmes permettant une bonne gestion du jardinage comme le contrôleur de débit d'eau et des lampes.
 
-===== NomBloc1
+===== Bloc  Cerveau
 
-Description textuelle du bloc 1.
+le kit potager dispose d'une unitée centrale qui va être connéctée à une base de données, afin de permettre la gestion les commandes de l'utilisateur et la collection des informations délivrées par les capteurs.
 
-===== NomBloc2
+===== Bloc Base de données 
 
-Description textuelle du bloc 1.
+L'unité centrale est connectée par réseau wifi à une base de donnée distante, cette dernière reçoit et stocke les données délivrées par l'unité centrale et par l'utilisateur à travers l'application.
+
+===== Bloc Application mobile 
+
+Notre application mobile permet de décrire l'état du potager à travers la collection des données depuis la base de données, et de communiquer et recevoire les ordres de l'utilisateur.
+

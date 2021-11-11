@@ -1,5 +1,5 @@
 === Description des interfaces (PAN1 / PAN2)
-
+////
 Pour le PAN1, il faut identifier et décrire sommairement toutes les
 interfaces entre modules.
 
@@ -12,12 +12,33 @@ Java.
 S’il y a des échanges de données complexes, il faut en décrire le format avec
 précision.
 Si c’est une interface entre deux blocs électroniques, c’est une description
-des signaux électroniques ou protocoles utilisés.
+des signaux électroniques ou protocoles utilisés. 
 
-==== InterfaceBloc1-2
+////
 
-Description textuelle d’interface
 
-==== InterfaceBloc2-4
+==== Déscription de l'interface entre le bloc potager et le bloc cerveau (microcontroleur). 
 
-Description textuelle d’interface
+//Description textuelle d’interface
+
+Comme nous voyons, dans l'architecture, le bloc potager est composé de deux sous blocs, le bloc capteurs (Temperature, luminosité, humidité et d'ébit d'eau) et le bloc actionneurs (Lampes et controleur de débigt). Au lieu de décrire l'interface entre le bloc potager et le bloc serveau, nous allons décrire l'interface entre chaque sous bloc et le bloc cerveau.
+
+===== Interface entre le bloc capteurs et bloc cerveau (microcontroleur).
+
+Afin d'avoir une gestion plus efficace des informations délivrées par les capteurs nous comptons utiliser des capteurs qui communiquent à l'aide du protocole I2C (Inter-Integrate Circuit) car grâce à lui nous pourront connecter un nombre raisonnable de capteurs sur le même bus. D'ailleurs il s'agit d'un protocole de communication simple à mettre en ouevre à l'aide d'un microcontroleur, une fois que nous n'aurrons qu'à gérér deux broches, la broche SDA (Serial Data) et la broche SCL (Serial Clock), donc la communication entre ces deux blocs se fera à l'aide du protocole I2C.
+
+===== Interface entre le bloc actionneurs et bloc cerveau (microcontroleur).
+
+Afin de gérer la luminosité du potager le microcontroleur que nous utiliserons commandera les lampes grâce à une commande PWM (Pulse Width Modulation en anglais et Modulation par largeur d'impulsion en français), une fois que la PWM nous permet grâce à la variation du rapport cyclique du signal utilisé, de varier sa valeur moyene et, ce qui nous permettra de faire varier la luminosité des lampes. Pour le controleur de débit la commande sera faite en mode PWM ou en TOR (tout ou rien), selon le type de controleur de débit que nous allons utiliser, en effet d'après nos recherches il y en a qui sont commandés en PWM et il y en a qui sont commandés en TOR.
+
+==== Interface entre le bloc cerveau (microcontroleur) et le serveur.
+
+//Description textuelle d’interface
+
+L'échange d'informations  entre le microcontroleur et le serveur cloud se fera à l'aide d'un protocole de communication client-serveur à définir, nous avons comme choix possible le protocole HTTP, une fois qu'il est facile à mettre en oeuvre sur plusierus microcontroleurs. Afin d'établir cette communication client-serveur, il faudra que notre microntroleur soit connecté sur internet, d'où la présence d'un routeur sur notre architecture.
+
+==== Interface entre le bloc serveur et l'application mobile.
+
+Comme pour le microcontroleur, l'application mobile communiquera avec le serveur à l'aide d'un protocole de communication client-serveur sur internet.
+
+
