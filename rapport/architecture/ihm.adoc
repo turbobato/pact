@@ -11,3 +11,9 @@ dessins au crayon, photographiés ou scannés, car ce sont les meilleurs
 supports de discussion : on appelle souvent ces dessins un
 « storyboard ». Une description textuelle fait le lien entre tous les
 éléments de l’IHM (ou des IHMs).
+
+image::storyboard_page-0001.jpg[Storyboard]
+
+
+
+
