@@ -1,6 +1,6 @@
 = Rapport d’avancement du groupe “5.1”
 
-PACT groupe 51 (Les plus beaux)
+PACT groupe 5.1
 
 ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 :doctype: book
@@ -19,16 +19,16 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 
 === Membres du groupe
 
-* Nom1 : Andrey El-Bitar
-* Nom2 : Aymane El Firdoussi
-* Nom3 : Bounlhom Aphayavong
-* Nom4 : Dário Carvalho
-* Nom5 : Guilhem Jazeron
-* Nom6 : Maxime Besson
+* Andrey El-Bitar
+* Aymane El Firdoussi
+* Bounlhom Aphayavong
+* Dário Carvalho
+* Guilhem Jazeron
+* Maxime Besson
 
 === Tuteur
 
-* Jean-Claude Dufourd
+* Jean Le Feuvre
 
 === Encadrant génie logiciel
 
@@ -36,23 +36,22 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 
 == Résumé du sujet choisi en français (PAN1)
 
+Il s’agit de créer un kit permettant de transformer une surface cultivable quelconque (potager, plante d'intérieur, jardinières de fleurs...) en surface connectée grâce à une application mobile qui permet à l'utilisateur de surveiller et modifier à distance les apports en eau, en lumière et la température des plantations. L'emploi d'un système de kit permet différents types d'usages et offre une solution évolutive (possibilité d'agrandir la surface cultivable).
+////
 *_Note: 15 lignes max_*
 
 Décrire votre projet sans le scénariser : De quoi s’agit-il ? En quoi
 cette idée est compatible avec le thème de PACT ? Qu’est-ce qu’il
 permettrait de faire de façon générale.
-
+////
 == English Summary (PAN1)
 
+The idea is to create a kit that transforms any cultivable surface (vegetable garden, houseplant, flower boxes etc.) into a connected surface thanks to a mobile application that enables the user to remotely monitor and manage the water, light and temperature of the plantation. The use of a kit system allows different types of uses and offers a scalable solution (possibility of enlarging the cultivabe area).
+////
 *_Note : 15 lignes max, version anglaise du texte précédent_*
+////
 
-Ligula dapibus egestas. Donec sed velit ac lectus mattis sagittis.
-
-In hac habitasse platea dictumst. Maecenas in ligula. Duis tincidunt
-odio sollicitudin quam. Nullam non mauris. Phasellus lacinia, velit sit
-amet bibendum euismod, leo diam interdum ligula, eu scelerisque sem
-purus in tellus.
-
+////
 *Notes concenant le rapport*
 
 Les différentes pages du document sont rédigées en utilisant le langage
@@ -68,7 +67,8 @@ différents fichiers) se trouve dans le fichier courant.
 **Prenez le temps** de supprimer le texte de remplissage et les sections non
 utilisées pour l'instant. Vous pouvez par exemple commenter ces parties non
 utilisées pour qu'elles n'apparaissent pas dans le document final. En Asciidoc,
-il suffit de les précéder de deux slashs (`//`).
+il suffit de les précéder de deux slashs (`//`). 
+////
 
 // en PDF on ne peut pas controler la position de la toc
 // Macros non supportées
@@ -95,17 +95,17 @@ include::scenario/scenario.adoc[Scénarios d’usage]
 
 ==  Architecture du projet (PAN1)
 
-=  Schéma d'architecture 
+===  Schéma d'architecture 
 
 image::Diagram1.jpg[Diagram1]
 
-=  Description des blocs 
+===  Description des blocs 
 * Bloc Potager : Ce bloc présente de manière générale et simplificative les différents systèmes présents dans notre potager connecté à savoir plusieurs capteurs pouvant mesurer plein de paramètres (temperature, humidité du sol, débit d'eau dans le tuyau et luminosité de la salle), ainsi que d'autres systèmes permettant une bonne gestion du jardinage comme le contrôleur de débit d'eau et des lampes.
 * Bloc  Cerveau : le kit potager dispose d'une unitée centrale qui va être connéctée à une base de données, afin de permettre la gestion les commandes de l'utilisateur et la collection des informations délivrées par les capteurs.
 * Bloc Base de données : L'unité centrale est connectée par réseau wifi à une base de donnée distante, cette dernière reçoit et stocke les données délivrées par l'unité centrale et par l'utilisateur à travers l'application.
 * Bloc Application mobile : notre application mobile permet de décrire l'état du potager à travers la collection des données depuis la base de données, et de communiquer et recevoire les ordres de l'utilisateur.  
 
-= 3.3 Description des interfaces
+=== Description des interfaces
 
 * Interface [Potager]-[Unité centrale] : L'unité centrale collecte les données mesurées par les capteurs installés dans le potager, et peut aussi commander les lampes et régler le débit d'eau.
 
