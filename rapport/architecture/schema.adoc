@@ -18,20 +18,16 @@ Ce bloc présente de manière générale et simplificatrice les différents syst
 
 ===== Bloc  Cerveau
 
-Il s'agit de l'unité centrale du système installé sur la surface à cultiver, ce bloc a pour but de gérer les informations délivrées par les capteurs, de commander les actionneurs présents dans le bloc potager (ordre envoyé par l'application mobile), ainsi que d'envoyer toutes les informations concernant les capteurs et les actionneurs vers une base de données distant qui sera dans un serveur, pour qu'elles soient ensuite exploitées par notre application mobile.  
+Il s'agit de l'unité centrale du système, ce bloc a pour but de gérer les informations délivrées par les capteurs, de commander les actionneurs présents dans le bloc potager (ordre envoyé par l'application mobile), ainsi que d'envoyer toutes les informations concernant les capteurs et les actionneurs vers une base de données distante, pour qu'elles soient ensuite exploitées par notre application mobile.  
 
-===== Bloc Serveur 
+===== Bloc Base de données 
 
 ////
-L'unité centrale est connectée par réseau wifi à une base de donnée distante, cette dernière reçoit et stocke les données délivrées par l'unité centrale et par l'utilisateur à travers l'application.
+L'unité centrale est connectée par un réseau wifi à une base de donnée distante, cette dernière reçoit et stocke les données délivrées par l'unité centrale, et par l'utilisateur à travers l'application.
 ////
-
-Ce bloc nous permettra d'avoir l'accès à une base de donné distant, celle-ci nous permettant de stocker toutes les informations concernant le système installé sur le potager, c'est-à-dire l'état des actionneurs, et les données concernant les capteurs.
 
 ===== Bloc Application mobile 
 
-Notre application mobile permet de décrire l'état de la surface à cultiver à travers la collection des données depuis la base de données, et d'avoir un suivi de la plantation à partie de n'importe quelle partie du monde, à la condition que l'utilisateur ait l'accès à l'internet.
-////
-le kit potager dispose d'une unitée centrale qui va être connéctée à une base de données, afin de permettre la gestion les commandes de l'utilisateur et la collection des informations délivrées par les capteurs.
+Le but de la création de cette application est de permettre à l'utilisateur de suivre l'évolution de l'état des ses plantes présentes dans le potager, à travers la collection des informations depuis la base de données, et de lui donner le droit de commander certains actionneurs à distance quel que son endroit actuel. 
 ////
 
