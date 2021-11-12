@@ -10,13 +10,7 @@ bibliographie : « comme démontré dans [2], … »
 
 ==== XXX
 
-Et magnis dis parturient montes, nascetur ridiculus mus.
-
-Aenean risus dui, volutpat non, posuere vitae, sollicitudin in, urna.
-Nam eget eros a enim pulvinar rhoncus. Cum sociis natoque penatibus et
-magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisis
-massa ut massa. Sed nisi purus, malesuada eu, porta vulputate, suscipit
-auctor, nunc.
+E
 
 ==== ZZZ
 
