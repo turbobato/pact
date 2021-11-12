@@ -21,7 +21,7 @@ des signaux électroniques ou protocoles utilisés.
 
 //Description textuelle d’interface
 
-Comme nous voyons, dans l'architecture, le bloc potager est composé de deux sous blocs, le bloc capteurs (Température, luminosité, humidité et de débit d'eau) et le bloc actionneurs (Lampes et contrôleur de débit). Au lieu de décrire l'interface entre le bloc potager et le bloc cerveau, nous allons décrire l'interface entre chaque sous bloc et le bloc cerveau.
+Comme nous voyons, dans l'architecture, le bloc potager est composé de deux sous blocs, le bloc capteurs (Température, luminosité, humidité et débit d'eau) et le bloc actionneurs (Lampes et contrôleur de débit). Au lieu de décrire l'interface entre le bloc potager et le bloc cerveau, nous allons décrire l'interface entre chaque sous bloc et le bloc cerveau.
 
 ===== Description de l'interface entre le bloc capteurs et le bloc cerveau (microcontrôleur).
 
