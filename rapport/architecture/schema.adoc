@@ -22,9 +22,9 @@ Il s'agit de l'unité centrale du système, ce bloc a pour but de gérer les inf
 
 ===== Bloc Base de données 
 
-////
+
 L'unité centrale est connectée par un réseau wifi à une base de donnée distante, cette dernière reçoit et stocke les données délivrées par l'unité centrale, et par l'utilisateur à travers l'application.
-////
+
 
 ===== Bloc Application mobile 
 
