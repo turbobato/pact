@@ -102,8 +102,6 @@ include::architecture/interfaces.adoc[Interface utilisateur graphique]
 
 
 
-
-
 include::architecture/ihm.adoc[Interface utilisateur graphique]
 
 <<<
