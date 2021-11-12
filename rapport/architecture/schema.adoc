@@ -14,7 +14,7 @@ raffiné dans un second schéma ; ou des schémas en plusieurs parties.
 
 ===== Bloc Potager 
 
-Ce bloc présente de manière générale et simplificatrice les différents systèmes qui seront dans la surface à cultiver, à savoir plusieurs capteurs pouvant mesurer les grandeurs physiques les plus pertinentes dans une plantation (température, humidité du sol, débit d'eau dans le tuyau et luminosité du potager), ainsi que d'autres systèmes permettant une bonne gestion du jardinage comme le contrôleur de débit d'eau et des lampes pour la lumière.
+Ce bloc présente de manière générale et simplificatrice les différents systèmes qui seront dans la surface à cultiver, à savoir plusieurs capteurs pouvant mesurer les grandeurs physiques les plus pertinentes dans une plantation (température, humidité du sol, débit d'eau dans le tuyau et luminosité), ainsi que d'autres systèmes permettant une bonne gestion du jardinage comme le contrôleur de débit d'eau et des lampes pour la lumière.
 
 ===== Bloc  Cerveau
 
