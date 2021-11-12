@@ -21,7 +21,7 @@ des signaux électroniques ou protocoles utilisés.
 
 //Description textuelle d’interface
 
-Comme nous voyons, dans l'architecture, le bloc potager est composé de deux sous blocs, le bloc capteurs (Température, luminosité, humidité et débit d'eau) et le bloc actionneurs (Lampes et contrôleur de débit). Au lieu de décrire l'interface entre le bloc potager et le bloc cerveau, nous allons décrire l'interface entre chaque sous bloc et le bloc cerveau.
+Il est visible dans l'architecture, que le bloc potager est composé de deux sous blocs, le bloc capteurs (Température, luminosité, humidité et débit d'eau) et le bloc actionneurs (Lampes et contrôleur de débit), donc au lieu de décrire l'interface entre le bloc potager et le bloc cerveau, nous allons décrire l'interface entre chaque sous bloc et le bloc cerveau.
 
 ===== Description de l'interface entre le bloc capteurs et le bloc cerveau (microcontrôleur).
 
@@ -29,7 +29,7 @@ Afin d'avoir une gestion plus efficace des informations délivrées par les capt
 
 ===== Description de l'interface entre le bloc actionneurs et le bloc cerveau (microcontrôleur).
 
-Afin de gérer la luminosité du potager le microcontrôleur que nous utiliserons commandera les lampes grâce à une commande PWM (Pulse Width Modulation en anglais et Modulation par largeur d'impulsion en français), une fois que la PWM nous permet grâce à la variation du rapport cyclique du signal utilisé, de varier sa valeur moyenne et, ce qui nous permettra de faire varier la luminosité des lampes. Pour le contrôleur de débit la commande sera faite en mode PWM ou en TOR (tout ou rien), selon le type de contrôleur de débit que nous allons utiliser, en effet d'après nos recherches il y en a qui sont commandés en PWM et il y en a qui sont commandés en TOR.
+Afin de gérer la luminosité du potager le microcontrôleur que nous utiliserons commandera les lampes grâce à une commande PWM (Pulse Width Modulation en anglais et Modulation par largeur d'impulsion en français), une fois que la PWM nous permet grâce à la variation du rapport cyclique du signal utilisé, de varier sa valeur moyenne, ce qui nous permettra de faire varier la luminosité des lampes. Pour le contrôleur de débit la commande sera faite en mode PWM ou en TOR (tout ou rien), selon le type de contrôleur de débit que nous allons utiliser. En effet, d'après nos recherches il y a des contrôleurs de débit qui sont commandés en PWM et il y en a qui sont commandés en TOR.
 
 ==== Description de l'interface entre le bloc cerveau (microcontrôleur) et le le bloc serveur.
 
