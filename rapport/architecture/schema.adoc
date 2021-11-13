@@ -29,5 +29,4 @@ L'unité centrale est connectée par un réseau wifi à une base de donnée dist
 ===== Bloc Application mobile 
 
 Le but de la création de cette application est de permettre à l'utilisateur de suivre l'évolution de l'état des ses plantes présentes dans le potager, à travers la collection des informations depuis la base de données, et de lui donner le droit de commander certains actionneurs à distance quel que son endroit actuel. 
-////
 
