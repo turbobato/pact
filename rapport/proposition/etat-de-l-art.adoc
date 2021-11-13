@@ -13,14 +13,4 @@ Le potager Connect de Veritable <<6>> est le potager le plus similaire au Pot'AG
 
 
 
-==== Exemples de citations
 
-Les références bibliographiques sont regroupées dans le fichier `References.adoc`
-à la racine du répertoire `rapport`.
-On peut y faire référence dans toutes les sous parties du document.
-
-On peut citer comme exemple l'article de Claude E. Shannon sur la
-théorie de la communication <<RefShannon>>
-ou, bien évidement, la vitrine des projets PACT <<VitrinePACT>>.
-
-Voir <<TOTO,la référence>> très intéressante elle aussi.
