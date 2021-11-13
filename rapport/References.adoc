@@ -4,7 +4,9 @@ titre de conférence, numéro, pages. Une webographie est aussi
 envisageable : titre, auteur, date, page web_*
 
 
-*[[RefNumerama]]RefNumerama: *Numerama*,_ Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ ,https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
+
+
+* [[1]]1 : *Numerama*,_ Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ ,https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
 
 * [[RefShannon]]RefShannon : *C. E. SHANNON*, _A Mathematical Theory
 of Communication_, Reprinted with corrections from The Bell System
