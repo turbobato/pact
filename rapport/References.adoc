@@ -14,7 +14,9 @@ envisageable : titre, auteur, date, page web_*
 
 * [[Ref4]]4 : _Poatger Modulo_, https://pretapousser.fr/products/modulo
 
-* [[Ref5]]5: _Potager Smart Connect_
+* [[Ref5]]5: _Potager Smart garden_, https://eu.clickandgrow.com/?gclid=Cj0KCQiA4b2MBhD2ARIsAIrcB-TBoOKSIVnOsFjI5Wez-0G-icoG7rZNoq5eTxwJVVuowlDKSH1JJwgaAgErEALw_wcB
+
+* [[Ref6]]6: _Potager Connect_, https://www.veritable-potager.fr/fr/potagers-d-interieur/182-potager-veritable-connect.html
 
 * [[RefShannon]]RefShannon : *C. E. SHANNON*, _A Mathematical Theory
 of Communication_, Reprinted with corrections from The Bell System
