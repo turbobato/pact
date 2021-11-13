@@ -10,7 +10,11 @@ envisageable : titre, auteur, date, page web_*
 
 * [[Ref2]]2 : _Potager Lilo_, https://pretapousser.fr/products/lilo-connect
 
-* [[Ref3]]3 : ,_Potager d’intérieur : hydroponique ou connecté ?_, https://www.autourdupotager.com/potager-interieur/
+* [[Ref3]]3 : _Potager d’intérieur : hydroponique ou connecté ?_, https://www.autourdupotager.com/potager-interieur/
+
+* [[Ref4]] : _Poatger Modulo_, https://pretapousser.fr/products/modulo
+
+* [[Ref5]]
 
 * [[RefShannon]]RefShannon : *C. E. SHANNON*, _A Mathematical Theory
 of Communication_, Reprinted with corrections from The Bell System
