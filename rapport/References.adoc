@@ -6,7 +6,7 @@ envisageable : titre, auteur, date, page web_*
 
 
 
-* [[RefNumerama]]1 : *Numerama*,_ Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ ,https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
+* [[Ref1]]1 : *Numerama*,_ Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ ,https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
 
 * [[RefShannon]]RefShannon : *C. E. SHANNON*, _A Mathematical Theory
 of Communication_, Reprinted with corrections from The Bell System
