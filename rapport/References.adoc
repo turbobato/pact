@@ -8,6 +8,8 @@ envisageable : titre, auteur, date, page web_*
 
 * [[Ref1]]1 : *Numerama*,_ Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ ,https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
 
+* [Ref2]]2 : _Potager Lilo_, https://pretapousser.fr/products/lilo-connect
+
 * [[RefShannon]]RefShannon : *C. E. SHANNON*, _A Mathematical Theory
 of Communication_, Reprinted with corrections from The Bell System
 Technical Journal, pages 379–423, 623–656, Vol. 27, 1948,
