@@ -6,7 +6,7 @@ envisageable : titre, auteur, date, page web_*
 
 
 
-* [[Ref1]]1 : *Numerama*,_ Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ , https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
+* [[Ref1]]1 : *Numerama*,_Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ , https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
 
 * [[Ref2]]2 : _Potager Lilo_, https://pretapousser.fr/products/lilo-connect
 
