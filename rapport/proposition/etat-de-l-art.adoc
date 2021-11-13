@@ -1,14 +1,7 @@
 === Description de l’état de l’art
 ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 
-*_Note : 1 page max._*
 
-Décrivez, en les citant via la bibliographie, les approches/produits
-ressemblant à votre projet et les différences éventuelles. Illustrez
-avec des images si besoin. Utilisez des renvois vers votre
-bibliographie : « comme démontré dans [2], … »
-
-==== XXX
 
 Le marché des potagers connectés s'est considérablement développé au cours de ces dernières années. En effet, de plus en plus de citadin souhaitent désormais culiver et consommer leur propre nouriture. Le principe du potager connecté est d'equiper le potager de capteur et d'actionneur afin d'assurer que les plantes puissent se développer dans des conditions optimales. Le prix des potagers connecters sur le marché  varient entre 60 et 250 euros. De plus, contrairement au système pot'AG, il n' est pas possible d'utiliser n'importe quelles graines, et il faut donc utiliser des recharges dont le prix va de 6 euros à 10 euros selon les marques. 
 
