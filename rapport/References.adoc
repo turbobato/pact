@@ -12,9 +12,9 @@ envisageable : titre, auteur, date, page web_*
 
 * [[Ref3]]3 : _Potager d’intérieur : hydroponique ou connecté ?_, https://www.autourdupotager.com/potager-interieur/
 
-* [[Ref4]] : _Poatger Modulo_, https://pretapousser.fr/products/modulo
+* [[Ref4]]4 : _Poatger Modulo_, https://pretapousser.fr/products/modulo
 
-* [[Ref5]]
+* [[Ref5]]5: _Potager Smart Connect_
 
 * [[RefShannon]]RefShannon : *C. E. SHANNON*, _A Mathematical Theory
 of Communication_, Reprinted with corrections from The Bell System
