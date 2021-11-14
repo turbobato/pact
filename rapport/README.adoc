@@ -7,7 +7,7 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 :stem: latexmath
 :source-highlighter: coderay
 :toc-title: Table des matières
-:toc: macro
+:toc:macro
 :sectnums:
 :imagesdir: images
 
