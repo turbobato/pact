@@ -1,15 +1,12 @@
-= Rapport d’avancement du groupe “5.1”
-
-PACT groupe 5.1
-
+= Rapport d’avancement du groupe 5.1
 ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
-:doctype: book
-:stem: latexmath
-:source-highlighter: coderay
-:toc-title: Table des matières
+:doctype:book
+:stem:latexmath
+:source-highlighter:coderay
+:toc-title:Table des matières
 :toc:macro
 :sectnums:
-:imagesdir: images
+:imagesdir:images
 
 
 // Partie non numérotée
