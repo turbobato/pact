@@ -11,8 +11,7 @@ ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
 
 // Partie non numérotée
 :sectnums!:
-== « Nom du groupe »
-* Pot'AG
+== Nom du groupe : Pot'AG
 
 === Membres du groupe
 
