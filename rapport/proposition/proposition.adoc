@@ -25,7 +25,7 @@ dire qu’elle pourrait servir à plusieurs types de plantations (pour des plant
 extérieur, il ne serait pas nécessaire d’acheter des spots lumineux, tandis qu’ils
 pourraient être utiles pour un potager en intérieur).
 
-Cette solution, contrairement à celles qui existent déjà, permet donc de s'adapter à différents profils d'utilisateurs, et pourrait éventuellement proposer des prix moins élevés que ceux qui existent actuellement, en raison du fait qu'un simple bac en plastique rempli de terreau pourrait servir de surface cultivable.
+Cette solution, contrairement à celles qui existent déjà (cf. état de l'art et <<références>>), permet donc de s'adapter à différents profils d'utilisateurs, différentes tailles de surfaces à cultiver, et pourrait éventuellement proposer des prix moins élevés que ceux qui existent actuellement, en raison du fait qu'un simple bac en plastique rempli de terreau pourrait servir de surface cultivable.
 
 
 ////
@@ -115,7 +115,7 @@ class foo {
 ** [ ] étape X
 ** [x] étape Y (a démarré en avance)
 ** [ ] étape Z
-*  [x] Complètement finit
+*  [x] Complètement fini
 ** [x] étape Q
 ** [x] étape R
 ** [x] étape `finale` E=mc^2^

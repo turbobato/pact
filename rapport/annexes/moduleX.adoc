@@ -1,3 +1,4 @@
+////
 === Module X
 
 ==== Descriptions
@@ -41,3 +42,4 @@ A \in \mathcal{M}_{u,k}(\mathbb{R}) et B \in \mathcal{M}_{k,f}(\mathbb{R})
 ==== Avancement
 
 ==== Bibliographie spécifique
+////

@@ -1,12 +1,14 @@
+////
 *_Note : Liste des références exploitées. Une référence complète
 donne titre, auteur(s), date, journal, revue, source de publication,
 titre de conférence, numéro, pages. Une webographie est aussi
 envisageable : titre, auteur, date, page web_*
+////
 
 
+[[références]]
 
-
-* [[Ref1]]1 : *Numerama*,_Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ , https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
+* [[Ref1]]1 : *Numerama*, _Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ , https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
 
 * [[Ref2]]2 : _Potager Lilo_, https://pretapousser.fr/products/lilo-connect
 

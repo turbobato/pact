@@ -1,6 +1,6 @@
 === Planning temporel PACT
 
-==== Taches / PAN1 18/11/21
+==== Taches / PAN1 (18/11/21)
 
 ===== Générales
 
@@ -9,10 +9,10 @@
 [cols=",^,^,,",options="header",]
 |====
 |Tâche |Qui |Quand |Fait |Remarques
-|sujet | Maxime, Dário, Guilhem| 25 oct.| fait avant le planning |
-|sujet en anglais |Bounlhom, Guilhem | 26 oct.| fait|
+|sujet | Maxime, Dário, Guilhem| 26 oct.| fait avant le planning |
+|sujet en anglais |Bounlhom, Guilhem | 12 nov.| fait|
 |scenario |Andrey, Maxime | 5 nov| fait|
-|architecture (schéma et documentation) | Aymane, Dário| 5 nov | fait|
+|architecture (schéma et documentation) | Aymane, Dário| 13 nov | fait|
 |découpage en modules |Andrey | 5 nov | fait|
 |planning temporel (ce document, personnalisé) | Bounlhom, Aymane| 1 nov. | fait |
 |====
@@ -27,6 +27,7 @@
 |répétition |groupe 5.1 |16 nov. | |
 |====
 
+//// 
 ==== Taches / PAN2 25/01/22
 
 ===== Générales
@@ -109,3 +110,4 @@
 |====
 
 * …
+////
