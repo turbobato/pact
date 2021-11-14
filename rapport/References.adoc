@@ -6,7 +6,7 @@ envisageable : titre, auteur, date, page web_*
 ////
 
 
-[[références]]
+
 
 * [[Ref1]]1 : *Numerama*, _Potagers « connectés » : prix, plants, application... quel est le meilleur à acheter en 2020 ?_ , https://www.numerama.com/tech/545034-prix-plants-connectivite-quel-potager-intelligent-faut-il-choisir.html
 
