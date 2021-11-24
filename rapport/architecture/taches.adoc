@@ -11,7 +11,7 @@ est typiquement constitué de plusieurs tâches et sous-tâches.
 Pour le PAN3, vous aurez à démontrer une version, *intégrée* et fonctionnelle de
 votre projet.
 Entre le PAN3 et le PAN4, vous pourrez améliorer les fonctionnalités intégrées
-sans pour autant en ajouter de nouvelles.
+sans pour autant en ajouter de nouvelles. 
 
 Reprenez et complétez le tableau suivant en précisant les différentes tâches et
 sous-tâches ainsi que le (ou les) critères de réussite pour l'intégration au
@@ -28,6 +28,6 @@ experts.
 | T1.4  | Comparaison des caractéristiques                      | …
 | T2    | Détection de rythme (Module « Audio/Rythme »)         | interfaces logicielles finalisées
 | T2.1  | Découpage signal sonore en bande fréquentielle        | la méthode X doit être implémentée
-| T2.2  | Détection du tempo                                    | …
+| T2.2  | Détection du tempo        ok                            | …
 | T2.3  | Changement de tempo                                   | …
 |====
