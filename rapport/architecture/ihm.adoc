@@ -8,4 +8,9 @@ diagramme de séquence spécifique pour ce dialogue.
 
 ////
 
-image::storyboard_page-0001.jpg[Storyboard]
+image::storyboard.001.jpeg[Storyboard]
+image::storyboard.002.jpeg[Storyboard]
+image::storyboard.003.jpeg[Storyboard]
+image::storyboard.004.jpeg[Storyboard]
+image::storyboard.005.jpeg[Storyboard]
+image::storyboard.006.jpeg[Storyboard]
