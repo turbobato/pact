@@ -17,9 +17,7 @@ des signaux électroniques ou protocoles utilisés.
 ////
 
 
-==== Description de l'interface entre le bloc potager et le bloc cerveau (microcontroleur). 
-
-//Description textuelle d’interface
+==== Description de l'interface entre le bloc potager et le bloc cerveau (microcontroleur) (interface interne au module systèmes embarqués). 
 
 Comme nous le voyons dans l'architecture, le bloc potager est composé de deux sous blocs, le bloc capteurs (Température, luminosité, humidité et débit d'eau) et le bloc actionneurs (Lampes et contrôleur de débit), donc au lieu de décrire l'interface entre le bloc potager et le bloc cerveau, nous allons décrire l'interface entre chaque sous bloc et le bloc cerveau.
 
@@ -31,13 +29,28 @@ Afin d'avoir une gestion plus efficace des informations délivrées par les capt
 
 Afin de gérer la luminosité du potager le microcontrôleur que nous utiliserons commandera les lampes grâce à une commande PWM (Pulse Width Modulation en anglais et Modulation par largeur d'impulsion en français), la PWM nous permet grâce à la variation du rapport cyclique du signal utilisé, de varier sa valeur moyenne, ce qui nous permettra de faire varier la luminosité des lampes. Pour le contrôleur de débit la commande sera faite en mode PWM ou en TOR (tout ou rien), selon le type de contrôleur de débit que nous allons utiliser. En effet, d'après nos recherches il y a des contrôleurs de débit qui sont commandés en PWM et il y en a qui sont commandés en TOR.
 
-==== Description de l'interface entre le bloc cerveau (microcontrôleur) et le le bloc base de données.
-
-//Description textuelle d’interface
+==== Description de l'interface entre le bloc cerveau (microcontrôleur) et le le bloc base de données (interface module Client-Serveur et module Systèmes embarqués).
 
 L'échange d’informations entre le microcontrôleur et la base de données cloud se fera par moyen d'un serveur cloud en utilisant un protocole de communication client-serveur à définir, nous avons comme choix possible le protocole HTTP, car qu'il est facile à mettre en œuvre sur plusieurs microcontrôleurs. Afin d'établir cette communication client-serveur, il faudra que notre microcontrôleur soit connecté sur internet, d'où la présence d'un routeur sur notre architecture.
 
-==== Description de l'interface entre le bloc base de données et le bloc application mobile.
+Nous utiliserons des requêtes HTTP pour la communication entre le microcontrôleur et la base de donnée/serveur. Nous utiliserons ainsi une API de type REST, les données échangées seront au format JSON.
+
+Dans le sens microcontroleur vers serveur :
+Le fichier JSON contiendra un champ permettant d'identifier le microcontroleur, un champ indiquant le type de la requête (s'il s'agit d'ajouter/supprimer un capteur, ou d'envoyer une alerte sur le niveau d'un capteur). Il y aura également un champ capteurs qui contiendra lui même un objet JSON contenant la liste des capteurs, avec en face des noms des capteurs de nouveau un objet JSON contenant les champs nécessaires à la description de leurs etats. 
+
+Dans le sens serveur vers microcontroleur : 
+Le fichier JSON contiendra un champ permettant d'identifier le microcontroleur à laquelle la requête est adressée, un champ pour le type de requête, puis par exemple si la requête est d'augmenter le niveau d'eau, il faudra un champ pour la liste des capteurs à activer qui sera un objet JSON.
+
+==== Description de l'interface entre le bloc base de données et le bloc application mobile (interface module Client-Serveur et module Android).
 
 Comme pour le microcontrôleur, l'application mobile communiquera avec le bloc base de données en passant par un serveur cloud à l'aide d'un protocole de communication client-serveur sur internet.
 
+Ici aussi nous allons utiliser le protocole HTTP pour mettre en place une interface de type REST et nous communiquerons en transmettant des fichiers JSON, dont la structure sera similaire à celle des fichiers JSON décrits dans l'interface Client Serveur - Systèmes embarqués, le serveur ne servant dans ce cas que d'intermédiaire. Il faudra cependant implémenter un mécanisme d'authentification (pour accéder à la bonne unité centrale), ce qu'il faudra prendre en compte dans les reqûetes HTTP. 
+
+Il y aura également des requêtes faites par rapport au forum de discussion, mais puisque nous avons choisi de gérer le forum de discussion dans un module à part entière (Web Services), nous allons spécifier cette interface dans la partie suivante, bien qu'elle soient techniquement également gérées par le serveur.
+
+==== Description de l'interface forum de discussion et application mobile (modules Web Service et Android)
+
+Cette interface concerne l'accès au forum de discussion entre utilisateurs depuis l'application Android.
+
+On utilisera ici aussi une interface de type REST avec échange de fichiers JSON entre l'application et la base de données. Il faudra ici aussi vérifier une authentification donc implémenter un protocole d'authentification qui soit le même que celui permettant d'accéder aux capteurs liés à son compte utilisateur. Les fichiers JSON comporteront ainsi un champ pour identifier l'utilisateur, un champ pour le type de reqûete, et s'il s'agit de poster un message sur le forum de discussion, un champ contenant le corps du message.
