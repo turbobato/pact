@@ -1,5 +1,7 @@
-//// 
+
 === Plans de test (PAN2+)
+
+////
 
 Vous allez travailler sur chaque bloc de votre projet, et qu’il soit
 informatique, électronique ou matériel, vous allez devoir faire du
@@ -23,4 +25,111 @@ test :
 * action ou entrée à appliquer
 * réaction ou sortie attendue.
 
-//// 
+////
+
+==== Plan de tests unitaires
+
+===== Module Capteurs 
+
+. Tester le fonctionnement de tous les capteurs (Humidité de l’air, humidité du sol, température, luminosité)
+
+    Le test des capteurs consistira à voir si les grandeurs qu’ils nous envoient son fiables et coherentes.
+
+. Tester les actionneurs (Pompe, leds d’éclairages)
+    
+    Le test de la pompe consistira à mesurer son débit.
+    Le test de la LED consistira juste à voir si on peut régler les longeurs d’onde (RGB) par rapport aux besoins des plantes.
+
+. Tester la communication entre la carte Électronique  et un téléphone portable/ PC à l’aide d’un navigateur web. 
+
+
+
+==== Plan de tests inter-modules
+
+===== Tests interface Android - Client Serveur (et Web Services)
+
+On rassemble ici les modules Client Serveur et Web Services car les deux constituent plus ou moins une seule entité qui a été séparée en deux modules pour répartir le travail.
+
+. Test d'authentification 
+
+** L'utilisateur doit pouvoir s'authentifier à son compte utilisateur via l'application en envoyant une requête d'authentification au serveur
+
+** Entrées : une association username/password
+
+** Retour : un message authentification réussie, et un accès aux services du compte. Dans le cas d'un mauvais mot de passe/nom d'utilisateur, l'application invite l'utilisateur à réessayer et ne lui donne pas accès aux données de son compte.
+
+. Test de création de nouveau compte/de changement de mot de passe
+
+** L'utilisateur doit pouvoir créer un compte depuis l'application et réinitialiser son mot de passe
+
+** Entrées : une association nom d'utilisateur/mot de passe pour créer un compte, ou alors une demande de réinitialisation de mot de passe via un bouton
+
+** Sortie : création d'un nouveau profil d'utilisateur effectif dans la BDD, ou réinitialisation effective du mot de passe dans la BDD (dépendra du processus suivi pour la réinitialisation)
+
+. Test de requête d'activation d'un actionneur
+
+** L'utilisateur doit pouvoir choisir d'activer un actionneur (par exemple en cas de niveau d'humidité critique)
+
+** Entrée : requête HTTP au serveur contenant les instructions
+
+** Sortie : si l'authentification est validée et que l'actionneur appartient bien à l'utilisateur qui a fait la requête, alors création d'une requête d'actionner l'actionneur correspondant dirigée vers le microcontrôleur responsable de ce capteur
+
+. Test de requête d'actualisation des informations sur les capteurs
+
+** L'utilisateur doit pouvoir demander une actualisation des données de ses capteurs. Cette actualisation doit pouvoir se faire de manière manuelle, via un bouton associé dans l'application, et doit se faire de manière automatique à chaque lancement de l'application
+
+** Entrée : requête au serveur concernant les données des capteurs d'un utilisateur
+
+** Sortie : si l'authentification est correcte, envoi d'une requête de mise à jour des capteurs au bloc Systèmes Embarqués. Une fois réception de la réponse des capteurs, envoi de la réponse de mise à jour à l'application Android.
+
+. Test d'actualisation ou de publication de message sur le forum de discussion
+
+** L'utilisateur doit pouvoir poster des messages sur le forum de discussion et actualiser les messages qu'il voit
+
+** Entrées : une reqûete pour poster un message/obtenir les derniers messages
+
+** Sortie : si l'authentification est correcte, un nouveau message posté dans le forum (dans la BDD), ou alors une réponse du serveur avec les nouveaux messages depuis la dernière actualisation
+
+===== Tests interface Systèmes Embarqués - Client Serveur 
+
+. Test d'envoi d'alerte en cas de niveau problématique
+
+** Si un capteur affiche un niveau problématique, le micro-controleur doit envoyer une alerte au serveur
+
+** Entrée : niveau de capteur alarmant
+
+** Sortie : envoi d'une requête au serveur, bonne récéption et prise en compte de la requête par le serveur (envoi de notification push à l'application android)
+
+. Test d'activation des actionneurs sur reqûete du serveur
+
+** Lorsque le serveur envoie au micro-controleur une requête d'activation d'un actionneurs qu'il a lui-même reçue d'un utilisateur, le micro-controleur doit mettre cette requête en oeuvre
+
+** Entrée : une requête d'activation du serveur
+
+** Sortie : l'actionneur correspondant doit correctement s'activer
+
+. Test de mise à jour des données des capteurs 
+
+** Lorsque le serveur envoie une requête de mise à jour des données des capteurs, qu'il a lui même reçue d'un utilisateur, le micro-controleur doit renvoyer les données correspondantes aux capteurs auxquels il est connecté
+
+** Entrée : une requête de mise à jour de la part du serveur
+
+** Sortie : une réponse contenant les données des capteurs, qui doivent être correctes par rapport à l'état actuel des capteurs qui est vu par le micro-contrôleur
+
+===== Tests interface Web Services - BDD (Client Serveur)
+
+. Test d'ajout d'un message dans la base de données
+
+** Lorsque l'API du forum de discussion reçoit une requête valide de publication de message, elle doit effectivement ajouter ce message à la BDD
+
+** Entrée : une requête d'ajouter le message à la BDD
+
+** Sortie : le message a correctement été ajouté à la BDD
+
+. Test de récupération de données depuis la BDD
+
+** Lorsque l'API du forum de discussion reçoit une requête d'actualisation des messages de la part d'un utilisateur, elle doit être capable de récupérer les données correspondantes depuis la BDD
+
+** Entrée : une requête de récupération de certaines données de la BDD
+
+** Sortie : retour des données effectivement demandées
