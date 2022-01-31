@@ -1,5 +1,5 @@
 === Schéma d’architecture
-image::Architecture_FinalPAN2.jpg[Architecture_FinalPAN2]
+image::DiagrammeFinal.png[DiagrammeFinal]
 
 
 ////
