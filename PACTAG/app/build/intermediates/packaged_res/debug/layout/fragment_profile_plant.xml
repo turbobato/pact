@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/plant_profile_name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="50dp" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:background="@color/green"
+            android:backgroundTint="@color/green"
+            android:padding="@dimen/default_margin"
+            android:text="@string/profile_page_plant_upload"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/trending1"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:animationCache="false"
+        android:background="#FAF9F3"
+        android:entries="@array/plant_profile_diagnostic_spinner_input"
+        android:fadeScrollbars="true"
+        android:paddingLeft="@dimen/default_margin"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="#FAF9F3"
+        android:entries="@array/plant_profile_water_spinner_input"
+        android:paddingLeft="@dimen/default_margin" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="#FAF9F3"
+        android:entries="@array/plant_profile_light_spinner_input"
+        android:paddingLeft="@dimen/default_margin" />
+
+</LinearLayout>
