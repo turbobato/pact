@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PACT\'AG</string>
+
+    <!-- Menu-->
+    <string name="bottom_home_item">Acceuil</string>
+    <string name="bottom_back_item">Retour</string>
+    <string name="bottom_forum_item">Forum</string>
+    <string name="bottom_plants_item">Plantes</string>
+    <string name="bottom_boxes_item">BOXs</string>
+
+    <!-- Page d'acceuil -->
+    <string name="first_page_name">Alertes</string>
+
+    <!-- Page profil de la plante -->
+    <string name="plant_profile_name">Ma plante</string>
+    <string-array name="plant_profile_diagnostic_spinner_input">
+        <item> Diagnostic : BOX A</item>
+        <item> Diagnostic : BOX B</item>
+        <item> Diagnostic : BOX C</item>
+    </string-array>
+    <string-array name="plant_profile_water_spinner_input">
+        <item> Ajout d\'eau : BOX A</item>
+        <item> Ajout d\'eau : BOX B</item>
+        <item> Ajout d\'eau: BOX C</item>
+    </string-array>
+    <string-array name="plant_profile_light_spinner_input">
+        <item> Ajout de la lumière : BOX A</item>
+        <item> Ajout de la lumière : BOX B</item>
+        <item> Ajout de la lumière : BOX C</item>
+    </string-array>
+
+
+    <!-- Page ajout d'eau -->
+    <string name="add_water_name">Ajout d\'eau</string>
+    <string name="add_water_action">Insérer quantité à verser (en mL)</string>
+    <string name="add_water_time">Insérer l\'horaire</string>
+    <string name="add_water_delete">Insérer quantité d\'eau</string>
+    <string name="add_water_confirm">Confirmer</string>
+
+
+    <!-- Page ajout de lumière-->
+    <string name="add_light_name">Ajout de lumière</string>
+    <string name="add_light_action_start">Débuter l\'éclairage</string>
+    <string name="add_light_action_stop">Arrêter l\'éclairage</string>
+    <string name="add_light_time">Insérer l\'horaire de début d\'éclairage</string>
+    <string name="add_light_confirm">Confirmer </string>
+    <string name="home_page_plants_section">Mes plantes</string>
+    <string name="home_page_plant_description">Description</string>
+    <string name="profile_page_plant_upload">charger l\'image</string>
+    <string name="automatique">Automatique</string>
+    <string name="manual">Manual</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="maxime_liste_plantes">maxime liste plantes</string>
+    <string name="maxime_forum">maxime forum</string>
+    <string name="maxime_liste_boxes">boxes</string>
+    <string name="diagnostic">diagnostic</string>
+    <string name="Ajout_d_eau">Ajout d\'eau</string>
+    <string name="Ajout_de_lumiere">Ajout de lumière</string>
+    <string name="Box">BOX</string>
+
+</resources>

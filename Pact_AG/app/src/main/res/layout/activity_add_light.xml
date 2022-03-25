@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/add_light_name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoeuib"
+        android:text="@string/manual"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/app_title"
+        app:layout_constraintTop_toBottomOf="@+id/app_title"
+        android:layout_marginTop="@dimen/default_margin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/add_light_action_start"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/default_margin"/>
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/add_light_action_stop"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/default_margin"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoeuib"
+        android:text="@string/automatique"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/app_title"
+        app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="#FAF9F3"
+        android:text="@string/add_light_time"
+        android:gravity="center" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="149dp"
+            android:layout_height="72dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/add_light_action_start"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
