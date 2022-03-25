@@ -1,3 +1,7 @@
+##.DS_Store for Mac_OS configuration files
+
+.DS_Store
+
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
