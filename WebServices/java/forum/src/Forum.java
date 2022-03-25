@@ -1,10 +1,13 @@
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 
 public class Forum {
 
     private URL url_BDD;
+    private ArrayList<Topic> topics;
+
 
     public Forum(String url){
         try {
@@ -21,10 +24,6 @@ public class Forum {
 
     public void setUrl_BDD(URL url_BDD){
         this.url_BDD = url_BDD;
-    }
-
-    public void postMessage(String message, String user){
-
     }
 
 }
