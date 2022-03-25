@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.pact.R;
 import com.example.pact.model.Plant;
+import com.pact.pactag.R;
+import com.pact.pactag.model.Plant;
 
 import java.util.List;
 
