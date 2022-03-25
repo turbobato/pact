@@ -13,6 +13,10 @@
         <entry key="..\:/Users/maxim/AndroidStudioProjects/Pact2/app/src/main/res/layout/activity_list_plant.xml" value="0.4" />
         <entry key="..\:/Users/maxim/AndroidStudioProjects/Pact2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/maxim/AndroidStudioProjects/Pact2/app/src/main/res/layout/activity_main2.xml" value="0.22826086956521738" />
+        <entry key="app/src/main/res/drawable/border_button.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_creation_plant.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_list_plant.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
