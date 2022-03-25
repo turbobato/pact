@@ -13,6 +13,8 @@
         <entry key="app/src/main/res/drawable/logo.xml" value="0.2735" />
         <entry key="app/src/main/res/layout/activity_add_light.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_water.xml" value="0.24682971014492755" />
+        <entry key="app/src/main/res/layout/activity_creation_plant.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_list_plant.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22175598144531244" />
         <entry key="app/src/main/res/layout/activity_profile_plant.xml" value="0.2613174438476562" />
         <entry key="app/src/main/res/layout/activity_profile_plants.xml" value="0.15070921985815602" />
