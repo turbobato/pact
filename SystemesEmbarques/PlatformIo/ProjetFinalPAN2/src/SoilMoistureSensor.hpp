@@ -1,12 +1,13 @@
 #pragma once
-
+#include<Arduino.h>
 class SoilMoistureSensor
 {
 private:
-    float moisture;
+    uint8_t m_id;
 public:
-    SoilMoistureSensor();
     float getMoisture();
+    void setId(uint8_t id);
+    uint8_t getId();
 };
 
 

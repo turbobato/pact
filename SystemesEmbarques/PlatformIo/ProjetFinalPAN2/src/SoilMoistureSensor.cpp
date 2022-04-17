@@ -1,12 +1,16 @@
 #include "SoilMoistureSensor.hpp"
-#include "Arduino.h"
+#include <Arduino.h>
 
-using namespace std;
 
 float SoilMoistureSensor::getMoisture(){
     return analogRead(35)*100/4095;
 }
 
-SoilMoistureSensor::SoilMoistureSensor(){
-
+uint8_t SoilMoistureSensor::getId(){
+    return m_id;
 }
+
+void SoilMoistureSensor::setId(uint8_t id){
+    m_id = id;
+}
+
