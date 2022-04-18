@@ -1,3 +1,9 @@
+#Ignore MacOs config files
+.DS_Store
+
+#Ignore VSCode config files
+.vscode
+
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
