@@ -3,9 +3,48 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/drawable/border_table.xml" value="0.2265" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.2265" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2265" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.2265" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/drawable/icon_data.xml" value="0.121" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/drawable/icone_refresh.xml" value="0.2265" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/drawable/rounded_fg.xml" value="0.2225" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/drawable/utilisateur.xml" value="0.121" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/activity_add_light.xml" value="0.264" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/activity_add_water.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/activity_creation_plant.xml" value="0.264" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/activity_creation_topic.xml" value="0.2127659574468085" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/activity_list_plant.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/activity_profile_plants.xml" value="0.264" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/activity_splash.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/fragment_boxes.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/fragment_forum.xml" value="0.4" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/fragment_home.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/fragment_plant_add.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/fragment_plants.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/item_horizontal_plant.xml" value="0.2" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/item_vertical_plant.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/list_box.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/list_item.xml" value="0.4" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Android/Pact_AG/app/src/main/res/layout/list_topic.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/activity_add_water.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/activity_exemple.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/activity_list_plant.xml" value="0.2" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/activity_profile_plants.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/border_table.xml" value="0.1" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/fragment_list__plant_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/fragment_plants.xml" value="0.1" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/item_horizontal_plant.xml" value="0.25" />
+        <entry key="..\:/Users/maxim/AndroidStudioProjects/pact51/Pact_AG/app/src/main/res/layout/item_vertical_plant.xml" value="0.25" />
         <entry key="app/src/main/res/drawable-anydpi/ic_home.xml" value="0.1905" />
         <entry key="app/src/main/res/drawable-anydpi/ic_temperature.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2735" />
+        <entry key="app/src/main/res/drawable/border_button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/border_table.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bottom_nav_color.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_logo_background.xml" value="0.2735" />
@@ -22,6 +61,7 @@
         <entry key="app/src/main/res/layout/fragment_boxes.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/fragment_forum.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/fragment_plant_add.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/fragment_plants.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/item_horizontal_plant.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_vertical_plant.xml" value="0.3051925659179688" />

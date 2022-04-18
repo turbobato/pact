@@ -1,40 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/black"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:gravity="center">
 
-    <TextView
-        android:id="@+id/profile_plant_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/plant_profile_name"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="50dp" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/upload_button"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:background="@color/green"
-        android:backgroundTint="@null"
-        android:padding="@dimen/default_margin"
-        android:text="@string/profile_page_plant_upload"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/profile_plant_name"
+            android:layout_width="269dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginEnd="56dp"
+            android:gravity="center"
+            android:text="@string/plant_profile_name"
+            android:textColor="@color/white"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/profile_plant_image"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:src="@drawable/trending1"
-        android:scaleType="centerCrop"/>
+        <Button
+            android:id="@+id/buttonArrosage"
+            android:layout_width="309dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="32dp"
+            android:text="Arrosage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/valeur_hum" />
+
+        <Button
+            android:id="@+id/buttonLamp"
+            android:layout_width="303dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="29dp"
+            android:text="Lampe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="141dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="19dp"
+
+            android:gravity="center"
+            android:text="Humidité"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_plant_name" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="141dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="46dp"
+            android:gravity="center"
+            android:text="Luminosité"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="78dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="Valeur"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="78dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Valeur :"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/valeur_hum"
+            android:layout_width="139dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="35dp"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toEndOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/valeur_lum"
+            android:layout_width="145dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="28dp"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView24"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <ImageButton
+            android:id="@+id/button_refresh"
+            android:layout_width="65dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="128dp"
+            android:background="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLamp"
+            app:srcCompat="@drawable/incone_refresh2" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="157dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="Temperature"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLamp" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="78dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="22dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Valeur :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <TextView
+            android:id="@+id/valeur_temp"
+            android:layout_width="145dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="22dp"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView27"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="58dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="92dp"
+            android:gravity="center"
+            android:text="%"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/valeur_hum"
+            app:layout_constraintTop_toBottomOf="@+id/profile_plant_name" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="65dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="96dp"
+            android:text="Lux "
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/valeur_lum"
+            app:layout_constraintTop_toBottomOf="@+id/buttonArrosage" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="59dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="°C"
+            app:layout_constraintStart_toEndOf="@+id/valeur_temp"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLamp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

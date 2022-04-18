@@ -48,6 +48,7 @@
 
 
         <Button
+            android:id="@+id/button_eclairage_allumee"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -58,6 +59,7 @@
             android:layout_marginLeft="@dimen/default_margin"/>
 
         <Button
+            android:id="@+id/button_eclairage_eteindre"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:gravity="center"
