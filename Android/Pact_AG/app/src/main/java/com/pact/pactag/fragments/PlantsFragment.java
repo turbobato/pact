@@ -1,14 +1,26 @@
 package com.pact.pactag.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
+import android.widget.ImageButton;
+
+import com.pact.pactag.Creation_PlantActivity;
+import com.pact.pactag.MainActivity;
 import com.pact.pactag.R;
+import com.pact.pactag.adapter.Adapter;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,10 +33,17 @@ public class PlantsFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private MainActivity context ;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    ArrayList courseImg = new ArrayList<>(Arrays.asList(R.drawable.porchidee, R.drawable.cactus2,
+            R.drawable.carotte, R.drawable.plante,
+            R.drawable.porchidee, R.drawable.carotte,
+            R.drawable.plante, R.drawable.cactus2));
+    ArrayList courseName = new ArrayList<>(Arrays.asList("Orchidée", "Cactus", "Carotte", "Connais pas", "Nom de merde",
+            "Tomates", "Nouvelles carottes", "patates"));
 
     public PlantsFragment() {
         // Required empty public constructor
@@ -60,7 +79,25 @@ public class PlantsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_plants, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plants, container, false);
+        Button mButtonAjout = (Button) rootView.findViewById(R.id.button_ajout);
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.context);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        Adapter adapter = new Adapter(getActivity(), courseImg, courseName);
+        recyclerView.setAdapter(adapter);
+        mButtonAjout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Creation_PlantActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        return rootView;
     }
+
+
 }

@@ -32,52 +32,62 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/default_margin"
             android:fontFamily="@font/segoeuib"
             android:text="@string/manual"
             android:textColor="#FFFFFF"
-            android:layout_marginLeft="@dimen/default_margin"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="@+id/app_title"
-            app:layout_constraintTop_toBottomOf="@+id/app_title"
-            android:layout_gravity="center"/>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/default_margin"
-            android:layout_marginRight="@dimen/default_margin"
-            android:background="@color/white"
-            android:gravity="center"
-            android:paddingLeft="@dimen/item_margin"
-            android:paddingTop="@dimen/item_margin"
-            android:paddingRight="@dimen/item_margin"
-            android:paddingBottom="@dimen/item_margin"
-            android:text="@string/add_water_action"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
+            app:layout_constraintTop_toBottomOf="@+id/app_title" />
 
 
     </LinearLayout>
 
-    <Button
-        android:layout_marginTop="20dp"
-        android:id="@+id/button_confirm_water_manual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/white"
-        android:backgroundTint="@null"
-        android:gravity="center"
-        android:text="@string/add_water_confirm"
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        android:textStyle="bold" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="81dp">
+
+        <Button
+            android:id="@+id/button_confirm_water_manual"
+            android:layout_width="142dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:backgroundTint="@null"
+            android:gravity="center"
+            android:text="@string/add_water_confirm"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_eteindre"
+            android:layout_width="142dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="33dp"
+            android:background="@color/white"
+            android:backgroundTint="@null"
+            android:text="Eteindre"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:layout_width="wrap_content"

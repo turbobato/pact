@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".controller.List_PlantActivity">
 
     <TableLayout
@@ -30,7 +31,7 @@
                 android:background="@drawable/border_table"
                 android:gravity="center"
                 android:text="NOM"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -39,7 +40,7 @@
                 android:background="@drawable/border_table"
                 android:gravity="center"
                 android:text="@string/diag"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -300,16 +301,5 @@
         android:backgroundTint="@android:color/holo_green_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
-
-    <ImageButton
-        android:id="@+id/return2"
-        android:layout_width="137dp"
-        android:layout_height="88dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert"
-        android:contentDescription="@string/retour"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
-##.DS_Store for Mac_OS configuration files
+#Ignore .class files
+*.class
 
+##.DS_Store for Mac_OS configuration files
 .DS_Store
 #VSCode config files
 *.vscode

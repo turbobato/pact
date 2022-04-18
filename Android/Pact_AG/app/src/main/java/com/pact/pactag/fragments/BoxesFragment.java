@@ -3,12 +3,20 @@ package com.pact.pactag.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.pact.pactag.MainActivity;
 import com.pact.pactag.R;
+import com.pact.pactag.adapter.Adapter;
+import com.pact.pactag.adapter.AdapterBox;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +29,12 @@ public class BoxesFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private MainActivity context ;
+
+
+
+
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -61,6 +75,23 @@ public class BoxesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_boxes, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_boxes, container, false);
+        ArrayList list_nom = new ArrayList();
+        ArrayList list_id = new ArrayList<>();
+        list_nom.add("box A");
+        list_id.add("1");
+        list_nom.add("box b");
+        list_id.add("2");
+        list_nom.add("box c");
+        list_id.add("3");
+
+
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView3);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.context);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        AdapterBox adapter = new AdapterBox(getActivity(), list_nom, list_id);
+        recyclerView.setAdapter(adapter);
+        return rootView;
+
     }
 }

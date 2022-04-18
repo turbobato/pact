@@ -1,17 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_forum"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".fragments.ForumFragment"
-    android:id="@+id/fragment_forum">
+    android:background="@color/black"
+    tools:context=".fragments.ForumFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_gravity="center"
+        android:id="@+id/textView12"
+        android:layout_width="150dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Forum"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="342dp"
+        android:layout_height="289dp"
+        android:layout_marginBottom="168dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTopic"
+        android:layout_width="260dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="41dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Creer un nouveau message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="94dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="28dp"
+        android:text="messages"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/maxime_forum" />
+        android:layout_marginStart="116dp"
+        android:layout_marginBottom="28dp"
+        android:text="Utilisateur"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/button_charge"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="33dp"
+        android:background="#000000"
+        android:contentDescription="charge_topic"
+        android:src="@drawable/incone_refresh2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTopic"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>
