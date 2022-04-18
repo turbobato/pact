@@ -1,8 +1,15 @@
 #include "Pump.hpp"
 #include<Arduino.h>
-#define pump 4
+#define pump 17
+#define channel 1
+#define freq 1000
+#define resolution 8
+#define velocity 140
+
+
 
 void Pump::setState(bool state){
+    m_state = state;
     digitalWrite(pump,state);
 }
 
@@ -17,4 +24,8 @@ uint8_t Pump::getId(){
 
 void Pump::setId(uint8_t id){
     m_id = id;
+}
+
+bool Pump::getState(){
+    return m_state;
 }

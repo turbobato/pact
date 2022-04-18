@@ -11,19 +11,19 @@ BoxAg boxAg;
 #define GREEN_PLANTE 17
 #define BLUE_PLANTE  18
 
+
 void setup()
 {
-
   Serial.begin(9600);
   boxAg.configSensors();
   boxAg.connect();
   boxAg.getMembersId();
   boxAg.sendIpToServer();
+  boxAg.getRequestFromServer();
 }
-
 
 
 void loop()
 {
-  
+  boxAg.blinkLed();
 }

@@ -1,6 +1,6 @@
 #include "Lamp.hpp"
 #include <Arduino.h>
-#define lampPin 17
+#define lampPin 4
 #define channel 0
 #define freq 500
 #define resolution 8
