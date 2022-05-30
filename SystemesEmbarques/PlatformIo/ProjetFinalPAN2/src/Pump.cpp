@@ -1,12 +1,17 @@
 #include "Pump.hpp"
 #include<Arduino.h>
-#define pump 17
+#define pump 32
 #define channel 1
-#define freq 1000
+#define freq 30000
 #define resolution 8
 #define velocity 140
 
-
+/**
+ *DEVKIT V4 (HUZZAH)
+ * Hardware : 23 (17) (PWM)
+ * ULN 2803A: 10 (12V), 9 (GND), 1 (23(17) (PWM))
+ * 
+*/
 
 void Pump::setState(bool state){
     m_state = state;

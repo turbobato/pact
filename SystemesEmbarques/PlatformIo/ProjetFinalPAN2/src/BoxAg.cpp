@@ -5,13 +5,19 @@
 #include <ESPAsyncWebServer.h>
 #include <AsyncJson.h>
 #define pump 
-#define LED 2
+#define ledInternet 18
+#define global_restart 39
 #define seuil 30
+#define ledOnOff 17
 /**
  * The ID of the box
+ * Hardware : (I2C)
+ * LED (GPIO 2)
  * */
-String id ="3"; 
-
+String id ="12"; 
+bool mode = false;
+byte humMax = 0;
+byte humMin = 0;;
 /**
  * Allow us to know if the box is connected or not to the internet
  * */
@@ -25,8 +31,10 @@ bool BoxAg::isConnected(){
  * */
 
 void BoxAg::connect(){
+    digitalWrite(ledOnOff,1);
     WiFi.mode(WIFI_STA); // explicitly set mode, esp defaults to STA+AP
     m_internetState = m_wifiManager.autoConnect("MY GARDEN","password");
+    digitalWrite(16,1);         //used to synchronise
     Serial.println(WiFi.localIP());
 }
 
@@ -35,21 +43,26 @@ void BoxAg::setLampLuminosity(int luminosity){
 }
 
 void BoxAg::setPumpState(bool state){
+   // digitalWrite(LED,state);
     m_pump.setState(state);
 }
 
 
 void BoxAg::restart(){
     m_wifiManager.resetSettings();
+    digitalWrite(ledInternet,0);
     ESP.restart();
 }
 
 void BoxAg::configSensors(){
+    pinMode(16,OUTPUT);
+    pinMode(ledOnOff,OUTPUT);
+    pinMode(global_restart,INPUT);
     m_sht20.initSHT20();
     m_capteurLux.begin();
     m_lamp.configLamp();
     m_pump.configPump();
-    pinMode(LED,OUTPUT);
+    pinMode(ledInternet,OUTPUT);
 }
 
 float BoxAg::readTemperature(){
@@ -82,6 +95,7 @@ bool BoxAg::patchRequestSensor(String url,float value,String field){
 
   m_http.begin(url);
   m_http.addHeader("Content-Type","application/json");
+  m_http.addHeader("Authorization","Bearer aaaaax"); 
   status = m_http.PATCH(JsonParameters);
   m_http.end();
 
@@ -101,6 +115,7 @@ bool BoxAg::patchRequest(String url,String value,String field){
   json[field] = value;
   serializeJson(json,JsonParameters);
   m_http.begin(url);
+  m_http.addHeader("Authorization","Bearer aaaaax");
   m_http.addHeader("Content-Type","application/json");
   status = m_http.PATCH(JsonParameters);
   m_http.end();
@@ -113,9 +128,10 @@ bool BoxAg::patchRequest(String url,String value,String field){
  * */
 
 void BoxAg::updateSensorsState(){
-    patchRequestSensor("http://192.168.1.160:8055/items/Humidity_sensor/"+String(m_humiditySensorId),readHumidity(),"value");
+    patchRequestSensor("http://192.168.1.160:8055/items/Humidity_Air_Sensor/"+String(m_humiditySensorId),readHumidity(),"value");
     patchRequestSensor("http://192.168.1.160:8055/items/Light_Sensor/"+String(m_lightSensorId),readLuminosity(),"value");
     patchRequestSensor("http://192.168.1.160:8055/items/Temperature_sensor/"+String(m_temperatureSensorId),readTemperature(),"value");
+    patchRequestSensor("http://192.168.1.160:8055/items/Humidity_Soil_Sensor/"+String(m_humiditySoilId),m_moistureSensor.getMoisture(),"value");
 }
 
 
@@ -134,14 +150,17 @@ void BoxAg::sendIpToServer(){
 
 void BoxAg::getMembersId(){
     StaticJsonDocument<350> JSONBuffer;
-    m_http.begin("http://192.168.1.160:8055/items/BoxAG/"+id+"?fields=humidity.id,temperature.id,light.id,pump.id,lamp.id");
+    m_http.begin("http://192.168.1.160:8055/items/BoxAG/"+id+"?fields=humidity_air,temperature,light,pump,lamp,humidity_soil");
+    m_http.addHeader("Authorization","Bearer aaaaax");
     m_http.GET();
     deserializeJson(JSONBuffer,m_http.getString());
-    m_humiditySensorId = (uint8_t)JSONBuffer["data"]["humidity"][0]["id"];
-    m_temperatureSensorId = (uint8_t)JSONBuffer["data"]["temperature"][0]["id"];
-    m_lightSensorId = (uint8_t)JSONBuffer["data"]["light"][0]["id"];
-    m_lamp.setId((uint8_t)JSONBuffer["data"]["lamp"][0]["id"]);
-    m_pump.setId((uint8_t)JSONBuffer["data"]["pump"][0]["id"]);     
+    m_humiditySensorId = (uint8_t)JSONBuffer["data"]["humidity_air"]; //[0]["id"];
+    m_temperatureSensorId = (uint8_t)JSONBuffer["data"]["temperature"]; // [0]["id"];
+    m_lightSensorId = (uint8_t)JSONBuffer["data"]["light"]; //[0]["id"];
+    m_lamp.setId((uint8_t)JSONBuffer["data"]["lamp"]); // [0]["id"]);
+    m_pump.setId((uint8_t)JSONBuffer["data"]["pump"]); //[0]["id"]); 
+    m_humiditySoilId =   (uint8_t)JSONBuffer["data"]["humidity_soil"]; //[0]["id"];  
+
 }
 
 
@@ -179,6 +198,28 @@ void BoxAg::getRequestFromServer(){
         
   });
 
+
+  AsyncCallbackJsonWebHandler *handlerMode = new AsyncCallbackJsonWebHandler("/changeMode", [](AsyncWebServerRequest *requestMode, JsonVariant &json) {
+    StaticJsonDocument<200> data;
+    requestMode->send(200, "ok");
+    
+    if (json.is<JsonArray>())
+    {
+      data = json.as<JsonArray>();
+    }
+    else if (json.is<JsonObject>())
+    {
+      data = json.as<JsonObject>();
+    }  
+    humMax = data["humidityMax"] ;
+    humMin = data["humMin"];
+    mode=data["mode"];
+    Serial.print("humMax = ");Serial.print(humMax);
+    Serial.print("humMin = ");Serial.print(humMin);
+    
+  });
+
+
     AsyncCallbackJsonWebHandler *handler = new AsyncCallbackJsonWebHandler("/lampLight", [](AsyncWebServerRequest *request, JsonVariant &json) {
     StaticJsonDocument<200> data;
     request->send(200, "ok");
@@ -193,31 +234,107 @@ void BoxAg::getRequestFromServer(){
     }  
     box.setLampLuminosity(data["value"]);  
   });
+
     m_server.addHandler(handler);
+    m_server.addHandler(handlerMode);
     m_server.begin();
 }
 
 void BoxAg::blinkLed(){
     static unsigned long previousTime = 0;
+    static unsigned long previousTimeLed =0;   //used to 
+    
 
     if(millis()-previousTime>=4000){
          previousTime = millis();
-         digitalWrite(LED,digitalRead(LED)^1);
          updateSensorsState();
     }
+
+     if(millis()-previousTimeLed>=50){
+         previousTimeLed = millis();
+         if(WiFi.status() == WL_CONNECTED)
+            digitalWrite(ledInternet,digitalRead(ledInternet)^1);
+        else
+            digitalWrite(ledInternet,0);
+    }
+
+     if(digitalRead(global_restart)) restart();
+
+
     if(millis()<previousTime) previousTime = 0;
+    if(millis()<previousTimeLed) previousTimeLed = 0;
 }
 
 
+void BoxAg::giveLux(){
+    m_mode = mode;
+    if(m_mode){
+        if(readLuminosity()<=20) setLampLuminosity(80); 
+        else setLampLuminosity(0);
+    }  
+}
+
 void BoxAg::watPlant(){
-    Serial.println(m_moistureSensor.getMoisture());
-    if(m_moistureSensor.getMoisture()>=30)
-        m_pump.setState(false);
+    m_humidityMax = humMax;
+    m_humdityMin = humMin;
+    m_mode = mode;
+    if(m_mode){
+        if(m_moistureSensor.getMoisture()>m_humidityMax) m_pump.setState(false);
+        else
+        if(m_moistureSensor.getMoisture()<m_humidityMax) m_pump.setState(true);  
+/*
+        if(40>m_humidityMax) m_pump.setState(false);
+        else
+        if(60<m_humdityMin) m_pump.setState(true);  */
+
+    }      
 }
 
 bool BoxAg::isWatering(){
-    return false; //digitalRead(17);
+    return digitalRead(16); 
+}
+
+bool BoxAg::getMode(){
+    return m_mode;
 }
 
 
+void BoxAg::timeConfig(){
+    configTime(m_gmtOffset_sec, m_daylightOffset_sec, m_ntpServer);
+}
 
+void BoxAg::countTime(){
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo)){
+    Serial.println("Failed to obtain time");
+  }
+  else
+   {
+    Serial.println(&timeinfo, "%A, %B %d %Y %H:%M:%S");
+    Serial.print("Day of week: ");
+    Serial.println(&timeinfo, "%A");
+    Serial.print("Month: ");
+    Serial.println(&timeinfo, "%B");
+    Serial.print("Day of Month: ");
+    Serial.println(&timeinfo, "%d");
+    Serial.print("Year: ");
+    Serial.println(&timeinfo, "%Y");
+    Serial.print("Hour: ");
+    Serial.println(&timeinfo, "%H");
+    Serial.print("Hour (12 hour format): ");
+    Serial.println(&timeinfo, "%I");
+    Serial.print("Minute: ");
+    Serial.println(&timeinfo, "%M");
+    Serial.print("Second: ");
+    Serial.println(&timeinfo, "%S");
+    Serial.println("Time variables");
+    char timeHour[3];
+    strftime(timeHour,3, "%H", &timeinfo);
+    Serial.println(timeHour);
+    char timeWeekDay[10];
+    strftime(timeWeekDay,10, "%A", &timeinfo);
+    Serial.println(timeWeekDay);
+    Serial.println();
+   } 
+  
+}

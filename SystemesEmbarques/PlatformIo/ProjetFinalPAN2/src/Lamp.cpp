@@ -1,10 +1,15 @@
 #include "Lamp.hpp"
 #include <Arduino.h>
-#define lampPin 4
+#define lampPin 21
 #define channel 0
 #define freq 500
 #define resolution 8
 
+/**
+ * Hardware: Lamp (GPIO 4-PWM) (5-PWM), vert (12V), marron (GND)
+ * 
+ * 
+*/
 void Lamp::setLuminosity(int luminosity){
     ledcWrite(channel,luminosity);
 }

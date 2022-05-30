@@ -7,23 +7,25 @@ WiFiManager wifiManager;
 #include <BoxAg.hpp>
 
 BoxAg boxAg;
-#define RED_PLANTE 19
-#define GREEN_PLANTE 17
-#define BLUE_PLANTE  18
+
 
 
 void setup()
 {
   Serial.begin(9600);
   boxAg.configSensors();
-  boxAg.connect();
-  boxAg.getMembersId();
-  boxAg.sendIpToServer();
+  boxAg.connect();          // conect the box to the internet
+  boxAg.getMembersId();    // get all box elements id from database
+  boxAg.sendIpToServer();  // 
   boxAg.getRequestFromServer();
+  //boxAg.timeConfig();
 }
 
 
 void loop()
 {
   boxAg.blinkLed();
+  boxAg.watPlant();
+  boxAg.giveLux();
+  
 }

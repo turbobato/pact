@@ -16,3 +16,6 @@ _book
 
 *.log
 .*.swp
+
+.DS_Store
+

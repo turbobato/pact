@@ -31,6 +31,9 @@ class BoxAg {
     byte m_humiditySensorId;
     byte m_temperatureSensorId;
     byte m_lightSensorId;
+    byte m_humiditySoilId;
+    byte m_humidityMax;
+    byte m_humdityMin;
     Pump m_pump;
     void getMembersId();
     void getRequestFromServer();
@@ -38,6 +41,10 @@ class BoxAg {
     void setPumpOn();
     void watPlant();
     bool isWatering();
+    void countTime();
+    void timeConfig();
+    void giveLux();
+    bool getMode();
 
     private:
     DFRobot_SHT20 m_sht20 {&Wire, SHT20_I2C_ADDR};
@@ -45,9 +52,14 @@ class BoxAg {
     Lamp m_lamp;
     SoilMoistureSensor m_moistureSensor;
     
+    const char* m_ntpServer = "pool.ntp.org";
+    const long  m_gmtOffset_sec = 3600;
+    const int   m_daylightOffset_sec = 3600;
+
     bool patchRequestSensor(String url,float value, String field);
     bool patchRequest(String url,String value,String field);
     bool m_internetState;
+    bool m_mode;
     WiFiManager m_wifiManager;
     HTTPClient m_http;
     AsyncWebServer m_server{80};
