@@ -24,7 +24,7 @@ void setup()
 
 void loop()
 {
-  boxAg.blinkLed();
+  boxAg.boxLoop();
   boxAg.watPlant();
   boxAg.giveLux();
   
