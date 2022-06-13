@@ -281,7 +281,7 @@ void BoxAg::watPlant(){
     if(m_mode){
         if(m_moistureSensor.getMoisture()>m_humidityMax) m_pump.setState(false);
         else
-        if(m_moistureSensor.getMoisture()<m_humidityMax) m_pump.setState(true);  
+        if(m_moistureSensor.getMoisture()<m_humdityMin) m_pump.setState(true);  
 /*
         if(40>m_humidityMax) m_pump.setState(false);
         else
